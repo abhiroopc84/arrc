@@ -19,8 +19,8 @@ const MapBoxLg = () => {
   };
 
   return (
-    <div className="hidden lg:flex h-dvh absolute right-0 top-0 -z-50">
-      <div className="flex relative overflow-hidden w-fit justify-items-center items-center">
+    <div className="flex w-full">
+      <div className="flex relative overflow-hidden w-full h-fit justify-items-center items-center rounded-3xl">
         <Skeleton
           className={`absolute top-0 left-0 w-full h-full z-50 ${
             mapLoad ? "hidden" : ""
@@ -34,9 +34,11 @@ const MapBoxLg = () => {
             zoom: 10,
           }}
           style={{
-            width: "100vw",
-            height: "100vh",
+            width: "100%",
+            maxHeight: "500px",
+            aspectRatio: "1",
             opacity: `${mapLoad ? 1 : 0}`,
+            borderRadius: "1.5rem",
           }}
           mapStyle={
             resolvedTheme === "dark"
