@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import Header from "@/components/header";
 import { ModeToggle } from "@/components/theme/mode-toggle";
-import { GeistMono } from "geist/font/mono";
+import "@fontsource/open-sauce-one";
 
 export const metadata: Metadata = {
-  title: "arrc",
+  title: "Abhiroop Reddy",
 };
 
 export default function RootLayout({
@@ -15,13 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={GeistMono.className}>
+    <html lang="en" style={{ fontFamily: "Open Sauce One" }}>
       <head>
-        <link
-          rel="icon"
-          href="/favicon.ico"
-          sizes="any"
-        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>
         <ThemeProvider
@@ -32,11 +27,10 @@ export default function RootLayout({
         >
           <div
             vaul-drawer-wrapper=""
-            className="relative p-6 min-h-dvh flex flex-col"
+            className="relative min-h-dvh h-full xl:h-dvh flex flex-col"
           >
-            <Header />
             {children}
-            <div className="absolute bottom-6 right-6">
+            <div className="absolute bottom-8 right-8 hidden md:flex">
               <ModeToggle />
             </div>
           </div>
