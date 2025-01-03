@@ -139,6 +139,14 @@ const config = {
             transform: "translate(-300px, -300px)",
           },
         },
+        marquee: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -146,7 +154,9 @@ const config = {
         "ping-slow": "ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;",
         "cloud-bounce": "bounce-cloud 100s linear infinite;",
         "text-color-animation": "text-color 5s ease-in-out infinite",
-        "text-color-animation-random": "text-color-random 10s ease-in-out infinite",
+        "text-color-animation-random":
+          "text-color-random 10s ease-in-out infinite",
+        marquee: "marquee 15s linear infinite",
       },
     },
   },
