@@ -13,7 +13,7 @@ const AsteriskCard = () => {
             <Asterisk className="h-5 w-5 animate-spin" />
           </div>
 
-          <span>beautiful animated components</span>
+          <span className="font-[family-name:var(--font-geist-mono)]">beautiful animated components</span>
         </div>
         <Button size={"icon"} asChild>
           <Link href={"https://ui.asterisk.uno/"}>

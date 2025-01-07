@@ -3,8 +3,19 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ModeToggle } from "@/components/theme/mode-toggle";
 import "@fontsource/open-sauce-one";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Geist, Geist_Mono } from "next/font/google";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Abhiroop Reddy",
@@ -16,11 +27,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" style={{ fontFamily: "Open Sauce One" }}>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -29,7 +42,7 @@ export default function RootLayout({
         >
           <div
             vaul-drawer-wrapper=""
-            className="relative min-h-dvh h-full xl:h-dvh flex flex-col"
+            className="relative min-h-dvh h-full xl:h-dvh flex flex-col font-[family-name:var(--font-geist-sans)]"
           >
             {children}
             <Analytics />

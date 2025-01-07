@@ -11,7 +11,7 @@ const MapCard = () => {
           <div className="flex flex-row gap-2 items-center">
             <span className="font-semibold text-lg">based in</span>
           </div>
-          <span>hyderabad, telangana, india</span>
+          <span className="font-[family-name:var(--font-geist-mono)]">hyderabad, telangana, india</span>
         </div>
         <Button size={"icon"} asChild>
           <Link href={"https://maps.app.goo.gl/nCpQP9Xv5szwbFzR8"}>
